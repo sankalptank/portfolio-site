@@ -1,0 +1,50 @@
+---
+import Header from '../components/header.astro';
+import Layout from '../layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<main>
+		<header>
+			<Header contact="✱" />
+		</header>
+		<section>
+			<h2><a target="_blank" href="mailto:sankalp.tank@gmail.com">email</a></h2>
+			<h3><a target="_blank" href="https://www.instagram.com/sankalptank/">instagram</a></h3>
+			<h3><a target="_blank" href="https://www.linkedin.com/in/sankalp-tank-572372347/">linkedin</a></h3>
+			<h3><a target="_blank" href="https://github.com/sankalptank">github</a></h3>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	*{
+		font-family: "Space Grotesk", sans-serif;
+		margin: 0%;
+		padding: 0%;
+	}
+	main{
+		background-color: black;
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		justify-content: space-between;
+	}
+	header{
+		padding: 1rem 2rem;
+	}
+	section{
+		color: white;
+		font-size: 3rem;
+		margin-top: 10rem;
+		align-self: flex-end;
+		padding: 5rem 2rem;
+	}
+	a{
+		text-decoration: none;
+		color: white;
+	}
+</style>

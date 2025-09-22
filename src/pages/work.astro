@@ -1,0 +1,138 @@
+---
+import Header from '../components/header.astro';
+import Layout from '../layouts/Layout.astro';
+import dot from '../portfolio/src/assets/dot.png'
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<main>
+		<header>
+			<Header work="✱" />
+		</header>
+		<section>
+			<ul class="main-menu">
+				<li><details>
+					<summary>Websites</summary>
+					<ul class="sub-menu">
+						<li><a target="_blank" href="thinktankai.org"><h3>thinktankai.org</h3></a>
+							<p>Sep.2025 / Web Design & Dev</p>
+						</li>
+						<li><a target="_blank" href="brickandmotors.org"><h3>brickandmotors.org</h3></a>
+							<p>Aug.2025 / Web Design & Dev</p>
+						</li>
+					</ul>
+				</details></li>
+				<li><details>
+					<summary>Data Science</summary>
+					<ul class="sub-menu">
+						<li><h3>Breast Cancer Research</h3>
+							<p>Oct.2025 / Data Analysis</p>
+						</li>
+						<li><a target="_blank" href="https://docs.google.com/document/d/13C8wPl6BxWsuQqmxfiz4ep_8KLCG0ww_3zraQ5PpSdA/edit?usp=sharing"><h3>How Can Disparate Retrieval Methods Work Together Effectively?</h3></a>
+							<p>Sep.2025 / Research Paper, Data Analysis</p>
+						</li>
+						<li><a target="_blank" href="https://github.com/sankalptank/Durham-District-School-Board-Library-Recommendation-System"><h3>Library Recommendation System</h3></a>
+							<p>Sep.2025 / Software Dev, Data Analysis</p>
+						</li>
+					</ul>
+				</details></li>
+				<li><details>
+					<summary>Writing Samples</summary>
+					<ul class="sub-menu">
+						<li><a target="_blank" href="https://docs.google.com/document/d/13C8wPl6BxWsuQqmxfiz4ep_8KLCG0ww_3zraQ5PpSdA/edit?usp=sharing"><h3>How Can Disparate Retrieval Methods Work Together Effectively?</h3></a>
+							<p>Sep.2025 / Research Paper, Data Analysis</p>
+						</li>
+						<li><a target="_blank" href="https://docs.google.com/document/d/1nkDNs_PWpJrUrTnAWH0h1Bt6w-kWr7T2pHLup2i9VdM/edit?usp=sharing"><h3>A Systems Approach to Short-Termism in United States Politics</h3></a>
+							<p>Apr.2025 / Essay</p>
+						</li>
+					</ul>
+				</details></li>
+			</ul>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	*{
+		font-family: "Space Grotesk", sans-serif;
+		margin: 0%;
+		padding: 0%;
+	}
+	main{
+		background-color: black;
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		justify-content: start;
+		flex-direction: column;
+	}
+	header{
+		padding: 1rem 2rem;
+	}
+	/* --- */
+
+	a{
+		text-decoration: none;
+	}
+
+	section{
+		color: white;
+		font-size: 2rem;
+		width: 50vw;
+		align-self: flex-end;
+		overflow: scroll;
+		scrollbar-width: none;
+		scroll-snap-type: mandatory;
+		scroll-margin-block-start: 20px;
+	}
+
+	.main-menu{
+		color: white;
+		list-style: none;
+		width: 100%;
+		padding-bottom: 14rem;
+	}
+
+	.sub-menu{
+		list-style-type: none;
+		row-gap: 2rem;
+	}
+
+	.sub-menu li{
+		margin: 1rem 2rem;
+	}
+	.sub-menu h3{
+		font-size: 3rem;
+		font-family: "Space Grotesk", sans-serif;
+		width: auto;
+		color: white;
+	}
+	.sub-menu p{
+		font-size: 1rem;
+		font-weight: 300;
+	}
+
+	summary{
+		font-size: 1.5rem;
+		font-family: "Space Grotesk", sans-serif;
+    	font-weight: 300;
+		cursor: pointer;
+	}
+	@keyframes open {
+		0% {
+			opacity: 0;
+			transform: translateY(-1vw);
+		}
+		100% {
+			opacity: 1;
+			margin-left: 0px
+		}
+	}
+
+	details[open] summary~* {
+		animation: open .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	}
+</style>
