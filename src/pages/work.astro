@@ -17,18 +17,21 @@ import dot from '../portfolio/src/assets/dot.png'
 				<li><details>
 					<summary>Websites</summary>
 					<ul class="sub-menu">
-						<li><a target="_blank" href="thinktankai.org"><h3>thinktankai.org</h3></a>
+						<li class="temp"><a><h3 style="color: rgb(82, 82, 82);">thinktankai.org</h3></a>
 							<p>Sep.2025 / Web Design & Dev</p>
 						</li>
-						<li><a target="_blank" href="brickandmotors.org"><h3>brickandmotors.org</h3></a>
+						<li class="temp"><a><h3 style="color: rgb(82, 82, 82);">brickandmotors.org</h3></a>
 							<p>Aug.2025 / Web Design & Dev</p>
+						</li>
+						<li><a target="_blank" href="https://defjunior.github.io/portfolio/"><h3>defjunior.github.io</h3></a>
+							<p>Jan.2025 / Web Design & Design</p>
 						</li>
 					</ul>
 				</details></li>
 				<li><details>
 					<summary>Data Science</summary>
 					<ul class="sub-menu">
-						<li><h3>Breast Cancer Research</h3>
+						<li class="temp"><h3 style="color: rgb(82, 82, 82);">Breast Cancer Research</h3>
 							<p>Oct.2025 / Data Analysis</p>
 						</li>
 						<li><a target="_blank" href="https://docs.google.com/document/d/13C8wPl6BxWsuQqmxfiz4ep_8KLCG0ww_3zraQ5PpSdA/edit?usp=sharing"><h3>How Can Disparate Retrieval Methods Work Together Effectively?</h3></a>
@@ -68,9 +71,13 @@ import dot from '../portfolio/src/assets/dot.png'
 		display: flex;
 		justify-content: start;
 		flex-direction: column;
+		background-image: url('ooorganize.svg');
 	}
 	header{
 		padding: 1rem 2rem;
+	}
+	.temp{
+		color: rgb(82, 82, 82);
 	}
 	/* --- */
 
@@ -134,5 +141,32 @@ import dot from '../portfolio/src/assets/dot.png'
 
 	details[open] summary~* {
 		animation: open .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	}
+	@media (max-width:1000px) {
+		section{
+			width: 90vw;
+		}
+		.sub-menu li{
+			margin: 1rem 0rem;
+		}
+		.sub-menu h3{
+			font-size: 1.6rem;
+		}
+	}
+	@media (max-width:900px) {
+		.sub-menu h3{
+			font-size: 1.6rem;
+		}
+	}
+	@media (max-width:700px) {
+		.sub-menu h3{
+			font-size: 1.5rem;
+		}
+	}
+	@media (max-width:500px) {
+		.sub-menu h3{
+			font-size: 1.3rem;
+			min-width: 90vw;
+		}
 	}
 </style>
